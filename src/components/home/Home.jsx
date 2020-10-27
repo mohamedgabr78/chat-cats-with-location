@@ -1,14 +1,17 @@
 import React from "react";
+import "./Home.scss";
 import Cats from "../cats/Cats";
 import Chat from "../chat/Chat";
 import Location from "../location/Location";
 
 function Home() {
   return (
-    <div>
-      <Cats />
+    <div className="home">
+      <div className="main-container">
+        <Cats />
+        <Location />
+      </div>
       <Chat />
-      <Location />
     </div>
   );
 }
