@@ -1,4 +1,154 @@
 .chat {
   width: 25%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2vh;
+  .ChatBox {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    flex-shrink: 1;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    $background_color: #cfd8dc;
+    $thumb: #90a4ae;
+    ::-webkit-scrollbar {
+      width: 0.8vw;
+    }
+    ::-webkit-scrollbar-track {
+      background: $background_color;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: $thumb;
+      border-radius: 6px;
+      border: 3px solid $background_color;
+    }
+
+    .messages-container {
+      max-height: 86vh;
+      height: 100%;
+      width: 96%;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      #scroll-aid {
+        margin-top: 10px;
+        width: 1px;
+        height: 1px;
+      }
+      .message {
+        width: 99%;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+
+        div {
+          background-color: rgb(141, 194, 141);
+          width: fit-content;
+          padding: 1vw;
+          margin: 5px 0;
+          border-radius: 10px;
+          max-width: 80%;
+          word-break: break-word;
+
+          &.sent {
+            color: brown;
+            align-self: flex-start;
+          }
+
+          &.delivered {
+            color: blue;
+            display: flex;
+            align-self: flex-end;
+          }
+        }
+        span {
+          font-size: 0.8vw;
+          color: rgb(172, 172, 172);
+
+          &.sent {
+            align-self: flex-start;
+          }
+
+          &.delivered {
+            align-self: flex-end;
+          }
+        }
+      }
+    }
+  }
+  .send {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1vw;
+    margin-top: 1vh;
+    .text {
+      flex-grow: 1;
+      max-height: 20vh;
+    }
+    button {
+      margin-left: 1vw;
+      width: 30%;
+      padding: 1vh 1vw;
+      height: 5vh;
+      outline: none;
+      background-color: rgb(7, 21, 105);
+      color: rgb(104, 104, 11);
+      border-radius: 5px;
+      border: 1px solid gold;
+      font-weight: bold;
+      &:hover {
+        color: gold;
+      }
+      &:active {
+        border: none;
+      }
+    }
+  }
+  .user {
+    width: 100%;
+    height: 8%;
+    flex-shrink: 2;
+  }
+
+  .dropdown {
+    width: 100%;
+    height: 100%;
+    span.p-dropdown-label.p-inputtext {
+      color: rgb(73, 157, 179) !important;
+      font-weight: bold;
+    }
+    .item {
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: green;
+      .icon {
+        color: green;
+        &.active {
+          color: rgb(163, 150, 75);
+        }
+      }
+
+      .label {
+        color: burlywood;
+        &.active {
+          color: rgb(163, 150, 75);
+        }
+      }
+    }
+  }
 }

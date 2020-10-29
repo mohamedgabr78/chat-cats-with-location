@@ -23,13 +23,13 @@
       box-shadow: -2px 0px 20px 11px gold;
       font-size: 1.5vw;
       font-weight: bold;
-      color: rgb(196, 196, 108);
-      background-color: rgb(32, 131, 131);
+      color: rgb(104, 104, 11);
+      background-color: rgb(7, 21, 105);
       outline: none;
       border: none;
       cursor: pointer;
       &:hover {
-        color: hotpink;
+        color: gold;
       }
       &:active {
         box-shadow: none;
@@ -53,6 +53,7 @@
       justify-content: center;
       align-items: center;
       position: relative;
+      border-radius: 50px;
       .loader {
         height: 100%;
         width: 100%;
@@ -73,8 +74,9 @@
         width: auto;
         height: 100%;
         max-width: 100%;
+        border-radius: 50px;
       }
-      background-color: gold;
+      background-color: #5e5656;
     }
   }
 }

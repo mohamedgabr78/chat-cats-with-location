@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Cats.scss";
 import axios from "axios";
-import loader from "../../images/loader.gif";
+import loader from "../../images/loader2.gif";
 
 function Cats() {
   const [imageURL, setImageURL] = useState({ url_1: null, url_2: null });
@@ -37,7 +37,6 @@ function Cats() {
         console.log(err);
         setLoading({ ...loading, url_2: false });
       });
-    console.log("here");
   }, [click]);
 
   return (
@@ -51,7 +50,7 @@ function Cats() {
                   <img src={loader} alt="loader" />
                 </div>
               )}
-              <img src={imageURL[key]} alt="cute_cat_pic" />
+              <img src={imageURL[key]} />
             </div>
           );
         })}
